@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">App-02</string>
+    <string name="btn_beer">Find Beer</string>
+    <string name="tv_morning">Morning Beer</string>
+    <string name="tv_message">Welcome To Beer Time</string>
+
+    <!-- Spinner -->
+    <string-array name="beer_colors">
+        <item>Light</item>
+        <item>Amber</item>
+        <item>Brown</item>
+        <item>Dark</item>
+    </string-array>
+</resources>
