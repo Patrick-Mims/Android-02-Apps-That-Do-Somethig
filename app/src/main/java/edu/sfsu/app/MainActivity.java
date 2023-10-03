@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
         String beerColor = String.valueOf(color.getSelectedItem());
 
-
         TextView tv_message = findViewById(R.id.tv_main);
         tv_message.setText(String.valueOf(color.getSelectedItem()));
 
