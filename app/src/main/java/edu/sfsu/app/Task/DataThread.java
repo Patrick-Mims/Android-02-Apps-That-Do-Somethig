@@ -14,8 +14,8 @@ public class DataThread extends Thread {
     public DataThread(String api) {
         this.api = api;
         Log.v("LOG", "DataThread()");
-        // The call to setDaemon(), with the argument true, makes the thread that is created a daemon thread.
-        // A Daemon thread is simple a background thread that is subordinate to the thread that created it.
+        /* The call to setDaemon(), with the argument true, makes the thread that is created a daemon thread.
+           A Daemon thread is simple a background thread that is subordinate to the thread that created it. */
         setDaemon(true);
     }
     // Synchronous Request
@@ -40,6 +40,7 @@ public class DataThread extends Thread {
                 }
             }
         });
+        thread.setDaemon(true);
         thread.start();
         thread.join();
     }

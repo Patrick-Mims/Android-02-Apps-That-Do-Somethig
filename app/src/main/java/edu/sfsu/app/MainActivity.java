@@ -10,41 +10,14 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.sfsu.app.Task.DataTask;
 import edu.sfsu.app.Task.DataThread;
 import edu.sfsu.app.model.DrinkModel;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
-    private static final OkHttpClient client = new OkHttpClient();
-
-    /*
-    final Thread thread = new Thread(new Runnable() {
-        @Override
-        public void run() {
-            Log.v("LOG", "RUN()");
-            Response body = null;
-            Request request = new Request.Builder().url("https://api.sampleapis.com/wines/reds").build();
-            try {
-                Response response = client.newCall(request).execute();
-                if(response.isSuccessful()) {
-                    assert response.body() != null;
-                    Log.v("LOG", "Response => " + response.body().string());
-                    response.body().close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    });
-    */
-
     RecyclerView recyclerView;
     ProgressBar progressBar;
     ArrayList<DrinkModel> model;
