@@ -14,8 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.sfsu.app.Task.DataThread;
+import edu.sfsu.app.Task.DrinkThread;
 import edu.sfsu.app.model.DrinkModel;
-import okhttp3.OkHttpClient;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
@@ -49,13 +49,19 @@ public class MainActivity extends AppCompatActivity {
         }
 
         tv_message.setText(brandsFormatted);
-
+        model = new ArrayList<>();
         // DataTask
         recyclerView = findViewById(R.id.recyclerView);
         String api = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";
         //         new DataTask(MainActivity.this, recyclerView, progressBar, model).execute(api);
-        DataThread dataThread = new DataThread(api);
-        dataThread.getData(api);
+
+        /*
+        DataThread dataThread = new DataThread(api, model);
+        //dataThread.getData(api);
+        dataThread.start();
+         */
+        DrinkThread drinkThread = new DrinkThread(api);
+        drinkThread.start();
         Log.v("LOG", "Main Thread");
     }
 }
