@@ -3,6 +3,7 @@
     <string name="btn_beer">Find Beer</string>
     <string name="tv_morning">Morning Beer</string>
     <string name="tv_message">Welcome To Beer Time</string>
+    <string name="media_route_menu_title">Cast Content</string>
 
     <!-- Spinner -->
     <string-array name="beer_colors">
@@ -10,5 +11,6 @@
         <item>Amber</item>
         <item>Brown</item>
         <item>Dark</item>
+        <item>Dark Brown</item>
     </string-array>
 </resources>

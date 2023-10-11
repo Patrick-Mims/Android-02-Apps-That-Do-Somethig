@@ -41,7 +41,7 @@
         android:layout_gravity="center"
         android:layout_margin="16dp"
         android:text="@string/btn_beer"
-        android:onClick="onClickFindBeer"
+        android:onClick="onSendMessage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -52,6 +52,21 @@
         android:layout_height="wrap_content"
         android:clipToPadding="true"
         android:visibility="visible"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+    <androidx.mediarouter.app.MediaRouteButton
+        android:id="@+id/media_route_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:mediaRouteTypes="user"
+        android:visibility="visible" />
+    </LinearLayout>
 </LinearLayout>
 <!-- Notes:
     match_parent means it should be as wide as the layout containing it.
